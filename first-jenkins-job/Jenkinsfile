@@ -14,14 +14,16 @@ pipeline {
       }
     }
     stage('Deploy') {
-      stage('Pre-Deploy'){
-        steps {
-          echo "Deploy application"
+      parallel{
+        stage('Pre-Deploy'){
+          steps {
+            echo "Deploy application"
+          }
         }
-      }
-      stage('Post-Deploy'){
-        steps{
-          echo "Jenkins pipeline ended"
+        stage('Post-Deploy'){
+          steps{
+            echo "Jenkins pipeline ended"
+          }
         }
       }
     }
