@@ -17,7 +17,7 @@ pipeline {
       parallel{
         stage('Pre-Deploy'){
           steps {
-            sh 'sleep 5s'
+            // sh 'sleep 5s'
             echo "Deploy application"
           }
         }
